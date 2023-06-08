@@ -42,6 +42,7 @@ namespace chatServer
 
             app.MapControllers();
             app.MapHub<ChatHub>("/myhub");
+            app.MapGet("/", () => "chatServer is running!");
 
             app.Run();
         }
